@@ -1,0 +1,25 @@
+apply plugin: 'com.android.application'
+apply from: config
+android {
+
+    defaultConfig {
+        applicationId "com.taos.up.learncomponent"
+    }
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+
+    if (IsBuildMudle.toBoolean()) {
+        //当isDebug true，app得依赖基础库，保证app不报错
+        compile project(':Library')
+    } else {
+        compile project(':learnui')
+    }
+    //butterKnife
+    annotationProcessor butterknifeCompiler
+    //arouter
+    annotationProcessor arouterCompiler
+
+}

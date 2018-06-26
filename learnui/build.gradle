@@ -1,0 +1,33 @@
+if (IsBuildMudle.toBoolean()) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+apply plugin: 'com.jakewharton.butterknife'
+apply from: config
+android {
+    sourceSets {
+        main {
+            //未开启独立编译 并且是独立的module，才会使用总是使用 library/AndroidManifest.xml
+            if (!IsBuildMudle.toBoolean()) {
+                manifest.srcFile 'src/main/release/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+                java {
+                    //release 时 debug 目录下文件不需要合并到主工程
+                    exclude 'library/**'
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':Library')
+
+    //butterKnife
+    annotationProcessor butterknifeCompiler
+    //arouter
+    annotationProcessor arouterCompiler
+}
