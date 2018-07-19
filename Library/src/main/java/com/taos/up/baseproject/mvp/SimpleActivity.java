@@ -19,6 +19,7 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import com.taos.up.baseproject.application.MyApplication;
+import com.zhy.autolayout.AutoLayoutActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +32,7 @@ import butterknife.Unbinder;
  * 非 mvp基类Activity
  */
 
-public abstract class SimpleActivity extends AppCompatActivity {
+public abstract class SimpleActivity extends AutoLayoutActivity {
     protected Activity mContext;
     private Unbinder mUnBinder;
     private int REQUEST_CODE_PERMISSION = 0x00099;

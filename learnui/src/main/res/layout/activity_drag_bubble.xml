@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.taos.up.baseproject.widgets.BaseTitle
+        android:id="@+id/base_title"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_marginTop="@dimen/toolbar_padding_top" />
+
+    <com.taos.up.learnui.widgets.DragBubbleView
+        android:id="@+id/drag_buddle_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:bubble_color="#ff0000"
+        app:bubble_radius="12dp"
+        app:bubble_text="12"
+        app:bubble_textColor="#ffffff"
+        app:bubble_textSize="12sp" />
+</LinearLayout>

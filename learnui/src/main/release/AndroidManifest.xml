@@ -9,6 +9,9 @@
         <activity
             android:name=".LearnUiListActivity"
             android:screenOrientation="portrait" />
+
+        <activity android:name=".ui.DragBubbleActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

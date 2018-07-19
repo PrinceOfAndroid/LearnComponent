@@ -30,6 +30,7 @@ public class MyApplication extends Application implements Application.ActivityLi
         }
         ARouter.init(getInstance());
         LogUtils.e("application onCreate");
+        //监听每个activity的生命周期
         registerActivityLifecycleCallbacks(this);
         Utils.init(this);
     }

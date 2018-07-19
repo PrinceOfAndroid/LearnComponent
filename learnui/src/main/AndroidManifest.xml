@@ -3,13 +3,13 @@
     package="com.taos.up.learnui">
 
     <application
+        android:name=".application.AppApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:name="com.taos.up.baseproject.application.MyApplication">
+        android:theme="@style/AppTheme">
         <activity android:name=".LearnUiListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,6 +17,30 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ui.DragBubbleActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.CommonUiActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.ScrollRecyclerViewActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.SplashUiActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="design_width"
+            android:value="720" />
+        <meta-data
+            android:name="design_height"
+            android:value="1280" />
+
     </application>
 
 </manifest>

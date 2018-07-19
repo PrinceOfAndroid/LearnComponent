@@ -1,11 +1,21 @@
+/**
+ * 判断是否独立出来
+ */
 if (IsBuildMudle.toBoolean()) {
     apply plugin: 'com.android.application'
 } else {
     apply plugin: 'com.android.library'
 }
+/**
+ * 配置默认参数以及butterknife
+ */
 apply plugin: 'com.jakewharton.butterknife'
 apply from: config
+
 android {
+    /**
+     * 配置AndroidManifest不同情况下的地址
+     */
     sourceSets {
         main {
             //未开启独立编译 并且是独立的module，才会使用总是使用 library/AndroidManifest.xml
