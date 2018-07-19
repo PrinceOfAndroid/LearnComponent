@@ -83,7 +83,7 @@ public class SplashView extends View {
         super.onSizeChanged(w, h, oldw, oldh);
         mCenterX = w / 2f;
         mCenterY = h / 2f;
-        mDiagonalDist = (float) Math.sqrt((w * w + h * h)) / 2f;//勾股定律
+        mDiagonalDist = (float) Math.sqrt((w * w + h * h)) / 2f; //勾股定律
     }
 
     private void init(Context context) {
