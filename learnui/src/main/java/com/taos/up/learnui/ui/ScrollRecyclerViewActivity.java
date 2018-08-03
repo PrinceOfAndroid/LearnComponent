@@ -9,7 +9,7 @@ import com.taos.up.baseproject.widgets.BaseTitle;
 import com.taos.up.learnui.R;
 import com.taos.up.learnui.R2;
 import com.taos.up.learnui.adapters.FakeAdapter;
-import com.taos.up.learnui.widgets.MyRecyclerView;
+import com.taos.up.learnui.widgets.MyHorizontalScrollRecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +24,7 @@ public class ScrollRecyclerViewActivity extends SimpleActivity {
     @BindView(R2.id.base_title)
     BaseTitle baseTitle;
     @BindView(R2.id.re_slide)
-    MyRecyclerView reSlide;
+    MyHorizontalScrollRecyclerView reSlide;
 
     private static List<String> items;
 

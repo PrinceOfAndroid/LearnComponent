@@ -13,6 +13,8 @@ import com.taos.up.baseproject.widgets.BaseTitle;
 import com.taos.up.learnui.adapters.UiDemoListAdapter;
 import com.taos.up.learnui.ui.CommonUiActivity;
 import com.taos.up.learnui.ui.DragBubbleActivity;
+import com.taos.up.learnui.ui.ModeActivity;
+import com.taos.up.learnui.ui.MyRecyclerViewActivity;
 import com.taos.up.learnui.ui.ScrollRecyclerViewActivity;
 import com.taos.up.learnui.ui.SplashUiActivity;
 
@@ -40,6 +42,8 @@ public class LearnUiListActivity extends SimpleActivity {
         uiList.add("常见Ui");
         uiList.add("recyclerView滑动");
         uiList.add("splashUi");
+        uiList.add("设计模式");
+        uiList.add("自实行recyclerView");
     }
 
     @Override
@@ -89,6 +93,14 @@ public class LearnUiListActivity extends SimpleActivity {
                         break;
                     case 3:
                         intent.setClass(LearnUiListActivity.this, SplashUiActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 4:
+                        intent.setClass(LearnUiListActivity.this, ModeActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 5:
+                        intent.setClass(LearnUiListActivity.this, MyRecyclerViewActivity.class);
                         startActivity(intent);
                         break;
                 }

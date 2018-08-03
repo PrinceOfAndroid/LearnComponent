@@ -9,7 +9,7 @@ import android.view.MotionEvent;
 import android.view.ViewConfiguration;
 
 
-public class MyRecyclerView extends RecyclerView {
+public class MyHorizontalScrollRecyclerView extends RecyclerView {
     private int touchSlop;
     private Context mContext;
     private int INVALID_POINTER = -1;
@@ -17,15 +17,15 @@ public class MyRecyclerView extends RecyclerView {
     private int initialTouchX;
     private int initialTouchY;
 
-    public MyRecyclerView(Context context) {
+    public MyHorizontalScrollRecyclerView(Context context) {
         this(context, null);
     }
 
-    public MyRecyclerView(Context context, @Nullable AttributeSet attrs) {
+    public MyHorizontalScrollRecyclerView(Context context, @Nullable AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public MyRecyclerView(Context context, @Nullable AttributeSet attrs, int defStyle) {
+    public MyHorizontalScrollRecyclerView(Context context, @Nullable AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         ViewConfiguration vc = ViewConfiguration.get(context);
         touchSlop = vc.getScaledEdgeSlop();

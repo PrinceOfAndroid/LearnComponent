@@ -8,10 +8,14 @@
         android:id="@+id/base_title"
         android:layout_width="match_parent"
         android:layout_height="72dp"
-        android:layout_marginTop="@dimen/toolbar_padding_top" />
+        android:paddingTop="@dimen/toolbar_padding_top" />
 
-    <com.taos.up.learnui.widgets.MyHorizontalScrollRecyclerView
-        android:id="@+id/re_slide"
+
+    <com.taos.up.learnui.widgets.re.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:clickable="true" />
+
+
 </LinearLayout>
