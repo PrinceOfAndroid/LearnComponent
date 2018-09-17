@@ -11,6 +11,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.taos.up.baseproject.mvp.SimpleActivity;
 import com.taos.up.baseproject.widgets.BaseTitle;
 import com.taos.up.learnui.adapters.UiDemoListAdapter;
+import com.taos.up.learnui.ui.BannerActivity;
 import com.taos.up.learnui.ui.CommonUiActivity;
 import com.taos.up.learnui.ui.DragBubbleActivity;
 import com.taos.up.learnui.ui.ModeActivity;
@@ -44,6 +45,7 @@ public class LearnUiListActivity extends SimpleActivity {
         uiList.add("splashUi");
         uiList.add("设计模式");
         uiList.add("自实行recyclerView");
+        uiList.add("自定义LayoutManager");
     }
 
     @Override
@@ -101,6 +103,10 @@ public class LearnUiListActivity extends SimpleActivity {
                         break;
                     case 5:
                         intent.setClass(LearnUiListActivity.this, MyRecyclerViewActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 6:
+                        intent.setClass(LearnUiListActivity.this, BannerActivity.class);
                         startActivity(intent);
                         break;
                 }
